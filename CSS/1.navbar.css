@@ -1,0 +1,195 @@
+/* whole navbar styling */
+
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 10vw;
+
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+
+            /* blur effect  */
+            background: rgba(0, 0, 0, 0.393); /* adjust transparency */
+            backdrop-filter: blur(2px); /* blur behind the navbar */
+            -webkit-backdrop-filter: blur(2px); /* Safari */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+            
+        }
+
+        /* logo styling  */
+
+        .navbar h1{
+            font-size: 26px;
+            font-weight: 600;
+            color: white;
+            text-shadow:0 0 2px #ffffff,0 0 3px #ffffff;
+        }
+
+
+        /* list styling */
+
+        .navbar ul{
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 1px;
+        }
+
+        .navbar ul li{
+            display: flex;
+            align-items: center;
+            list-style: none;
+            font-size: 13.5px;
+            font-weight: 600;
+        }
+
+
+        /* list text styling  */
+        .navbar ul li a{
+            text-decoration:  none;
+            color: white;
+            letter-spacing: 1px;
+            transition: 0.5s ease;
+            padding-bottom: 5px; 
+            border-bottom: 2px solid transparent;
+        }
+
+                .navbar ul li a:hover{
+                    text-decoration:  none;
+                    color: #FFDD00;
+                    text-shadow:
+                        0 0 1px #ff0,
+                        0 0 3px #ff0;
+                    border-bottom-color: #FFDD00; /* Neon yellow underline */
+                    
+                }
+
+                .navbar ul li a.active{
+                    color: #FFDD00;
+                    text-shadow:
+                        0 0 1px #ff0,
+                        0 0 3px #ff0;
+                    border-bottom-color: #FFDD00;
+                }
+
+        /* navbar resume button styling   */
+
+        .navbar button{
+            background: #FFDD00;
+            padding: .6rem 1.5rem;
+            border: 1px solid #ff0;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow:0 0 3px #ff0,0 0 6px #ff0;
+            
+            font-size: 16px;
+            font-weight: 600;
+            transition: 0.4s ease;
+        }
+
+                .navbar button:hover{
+                    background: #ffeb67;
+                    transform: scale(1.07);
+                }
+
+
+        /* mobile things  */
+
+        /* three bar  */
+        .navbar .nav-bars{
+            display: none;
+        }
+
+        /* cross mark bar  */
+        .navbar-links .cross-mark{
+            display: none;
+        }
+
+        /* extra resume button as the main button is not in ul  */
+        .resume-a{
+            display: none;
+        }
+
+
+
+
+
+
+/* responsivenes  */
+
+        @media (max-width: 1024px) {
+        
+        /* 3 line bar to show in mobile  */
+        .navbar .nav-bars{
+        display: block;
+        font-size: 1.6rem;
+        cursor: pointer;
+        }
+
+        /* cross mark to close the mobile nav  */
+        .navbar-links .cross-mark{
+            display: inline-block;
+            font-size: 30px;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: 0.8s ease;
+        
+        }
+
+                .navbar-links .cross-mark:hover{
+                    color: #FFDD00;
+                    transform: scale(1.05) rotate(90deg);
+                }
+
+        /* just like navbar ..an extra div for mobile layout  */
+        .navbar .navbar-links{
+            z-index: 1000;
+            position: absolute;
+            background: #111111;
+            height: 100%;
+            min-height: 100vh;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 350px;
+            padding-top: 2rem;
+            transition: 0.45s ease;
+        }
+
+                /* this function to call the navbar from right -100% to 0  */
+                .navbar-links.active{
+                    right: 0;
+                }
+
+        /* text links styling for mobile  */
+
+        .navbar ul{
+            flex-direction: column;
+            width: 100%;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .navbar ul li a{
+            font-size: .9rem;
+        } 
+        
+
+        /* hiding the pc resume button and displaying the mobile one */
+        .my-resume{
+            display: none;
+        }
+
+            .resume-a{
+                display: block;
+            } 
+            
+            .navbar-links ul a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+

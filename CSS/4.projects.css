@@ -1,0 +1,176 @@
+
+/* upper section  */
+.projects{
+    width: 100%;
+    padding: 5rem 10vw 0 10vw;
+}
+
+.upper-projects{
+    text-align: center;
+}
+
+.projects h1{
+    font-size: 3rem;
+    color: #FFDD00;
+}
+
+
+/* whole projeect container  */
+        .projects-container{
+            width: 100%;
+            margin-top: 2.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+/* project card  */
+        .projects-card{
+            width: 100%;
+            background: #111111;
+            border: 1px solid #ffdd0050;
+            border-radius: 20px;
+            transition: 0.4s ease; 
+            overflow: hidden;
+        }
+
+        .projects-card:hover{
+            box-shadow: 0 0 8px #FFDD00, 0 0 16px #FF4C00;
+            transform: translateY(-5px);
+        }
+
+
+/* card image  */
+        .card-img{
+            border: none;
+            outline: none;
+        }
+
+        .card-img img{
+            width: 100%;
+            aspect-ratio: 1920/1080;
+            border-radius: 20px 20px 0 0;
+        }
+
+/* card details*/
+        .card-info{
+            padding: 1.5rem 2vw;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+
+        .card-info h2{
+            font-size: 1.6rem;
+            color: #FFDD00;
+        }
+
+        .card-info p{
+            font-size: .9rem;
+            color: #cccccc;
+        }
+
+            .info-tags{
+                display: flex;
+                gap: 1rem;
+                text-align: center;
+                flex-wrap: wrap;
+            }
+
+            .info-tags p{
+            padding: .2rem .5rem;
+            background: #242424;
+            border-radius: 20px;
+            font-size: .7rem;
+            }
+
+/* view button  */
+        .info-link{
+            background: #FFDD00;
+            padding: .6rem 1.5vw;
+            width: 100%;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            cursor: pointer;
+            transition: 0.4s ease;
+        }
+
+                .info-link:hover{
+                    transform: scale(1.05);
+                    background: #fbe768e7;
+                    
+                }
+
+                .info-link:hover i{
+                    transform: rotate(360deg); 
+                }
+
+        .info-link a{
+            text-decoration: none;
+            color: black;
+            font-size: 1rem;   
+        }
+
+        .info-link i{
+            text-decoration: none;
+            color: black;
+            font-size: 1rem; 
+            transform: rotate(320deg); 
+            transition: 0.4s ease;
+        }
+
+
+
+
+/* responsiveness  */
+
+@media (max-width: 900px) {
+        .projects-container {
+            grid-template-columns: 1fr;
+        }
+
+        /* essential padding, card-details and button  */
+        .card-info{
+            padding: 1.5rem 4vw;
+        }
+
+        .info-link{
+            padding: .7rem 4vw;
+        }
+}
+
+
+/* font responsiveness  */
+
+        @media (max-width: 500px) {
+        
+        .upper-projects h1{
+            font-size: 2.1rem;
+        }
+    
+        .card-info h2{
+            font-size: 1.4rem;       
+        }
+
+        .card-info p{
+            font-size: .7rem;
+            
+        }
+
+        .info-tags p{
+        font-size: .6rem;
+        }
+
+        .info-link a{
+            font-size: .8rem;   
+        }
+
+        .info-link i{
+            font-size: .8rem; 
+            
+        }
+
+        }

@@ -1,0 +1,216 @@
+.contact-me{
+    width: 100%;
+    padding: 5rem 10vw 0 10vw;
+}
+
+.upper-contact-me{
+    text-align: center;
+}
+
+.upper-contact-me h1{
+    font-size: 3rem;
+    color: #FFDD00;
+}
+
+
+
+/* contact me container  */
+
+        .contact-me-container{
+            width: 100%;
+            margin-top: 2.5rem;
+            display: flex;
+            gap: 2rem;
+        }
+
+
+/* left one  */
+        .contact-left{
+            width: 100%;
+            max-width: 25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: .6rem;
+        }
+
+        /* left single box styling  */
+        .contact-left-box{
+            border-radius: 10px;
+        }
+
+        /* icon div  */
+        .contact-box-icon{
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        /* details styling  */
+        .contact-box-details{
+            display: flex;
+            flex-direction: column;
+            gap: .4rem;
+        }
+
+            .contact-box-icon i{
+                font-size: 1.2rem;
+                color: #FFDD00;
+                margin-top: 0.2rem;
+            }
+
+            .contact-box-details h2{
+                font-size: 1.2rem;
+            }
+
+            .contact-box-details p{
+                font-size: 1.1rem;
+                color: #cccccc;
+            }
+
+
+
+/* right one  */
+        .contact-right{
+            width: 100%;
+        }
+
+/* form div  */
+        .contact-form{
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+        }
+
+        /* input box div- 2upper input div  */
+        .input-row{
+            display: flex;
+            justify-content: space-between;
+            gap: 1.3rem;
+        }
+
+        /* 2 upper inputs */
+        .input-row input{
+            width: 100%;
+        }
+
+        /* whole input styling */
+        .contact-form input{
+            padding: 1.15rem;
+            background: #1a1a1a;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            color: #cccccc;
+            font-size: 1rem;
+            transition: 0.4s ease;
+        }
+
+        .contact-form textarea{
+            padding: 1.3rem;
+            background: #1a1a1a;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            color: #cccccc;
+            font-size: 1rem;
+            height: 10rem;
+            font-size: 1rem;
+            transition: 0.4s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+        outline: none;
+        box-shadow: 0 0 4px #FFDD00, 0 0 8px #FF4C00;
+        border: 1px solid #FFDD00;
+        }
+
+
+        /* button styling  */
+
+        .contact-form button{
+            padding: .9rem 1.5rem;
+            background: #FFDD00;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            align-self: flex-end;
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: 0.4s ease;
+            width: 100%;
+            max-width: 12rem;
+        }
+
+            .contact-form button:hover {
+            transform: scale(1.05);
+            background: #d39700;
+            }
+
+
+
+
+/* responsivness  */
+
+
+@media (max-width: 900px) {
+
+        .contact-me-container{
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        .contact-form button{
+            align-self: center;
+            width: 100%;
+            max-width: 100%;
+        }
+
+}
+
+/* changing font sizes for mobile  */
+
+@media (max-width: 500px) {
+
+        .upper-contact-me h1{
+            font-size: 2.1rem;
+        }
+
+        .input-row{
+            flex-wrap: wrap;
+        }
+
+        .contact-me-container{
+            gap: 3rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-left{
+            gap: 1.5rem;
+        }
+
+        .contact-box-icon i{
+            font-size: 1rem;
+        }
+
+        .contact-box-details h2{
+            font-size: 1rem;
+        }
+
+        .contact-box-details p{
+            font-size: .9rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea{
+            padding: 1rem;
+            font-size: .9rem;
+        }
+
+        .contact-form button{
+            padding: .7rem;
+            font-size: .94rem;
+        }
+
+}

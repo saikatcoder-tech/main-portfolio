@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="./CSS/1.navbar.css">
+    <link rel="stylesheet" href="./CSS/2.hero.css">
+    <link rel="stylesheet" href="./CSS/3.aboutme.css">
+    <link rel="stylesheet" href="./CSS/4.projects.css">
+    <link rel="stylesheet" href="./CSS/5.contact.css">
+    <link rel="stylesheet" href="./CSS/6.footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+
+
+<!-- navbar  -->
+    <div class="navbar">
+            <h1>&lt;Ivaan /&gt;</h1>
+            <!-- mobile navbar menu -->
+            <div class="navbar-links">
+                <!-- mobile nav close bar -->
+                <i class="fa-solid fa-xmark cross-mark"></i>
+            <ul>
+                <li><a href="#home" class="active">HOME</a></li>
+                <li><a href="#about-me">ABOUT ME</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact-me">CONTACT US</a></li>
+               <a href="./visuals/SB_resume2.pdf" download><button class="my-resume resume-a">Resume</button></a> 
+            </ul>
+            </div>
+            <!-- this resume button is for pc -->
+           <a href="./visuals/SB_resume2.pdf" download><button class="my-resume">Resume</button></a> 
+            <!-- mobile nav bar -->
+            <i class="fa-solid fa-bars nav-bars"></i>
+    </div>
+
+<!-- hero page -->
+    <div class="container" id="home">
+            <!-- background animation -->
+            <video autoplay muted loop class="hero-video">
+            <source src="./visuals/video2.mp4" type="video/mp4" id="myVideo">
+            </video>
+
+            <!-- hero content  -->
+            <div class="container-left">
+                <p>Hi, my name is,</p>
+                <h1>Saikat Biswas</h1>
+                <h2>I'm<span class="typing-text"></span></h2>
+                <button onclick="location.href='#contact-me'">Get In Touch</button>
+            </div>
+
+            <!-- social sidebar for pc -->
+            <div class="container-socials">
+                <a href="https://github.com/saikatcoder-tech" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/devsaikatbiswas/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/dev.ivaan/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/dev_ivaan" target="_blank"><i class="fab fa-twitter"></i></a>
+                <hr>
+            </div>
+
+            <div class="hero-scrolldown">
+                <i class="fas fa-chevron-down arrow-scroll-down" onclick="location.href='#about-me'"></i>
+                <h2 onclick="location.href='#about-me'">Scroll Down</h2>
+            </div>
+    </div>
+
+<!-- about-me page -->
+    <section class="about-me" id="about-me">
+
+        <div class="upper-about">
+            <h1>Why Hire Me?</h1>
+            <div class="about-filter">
+                <div class="filter-button active" data-target="about-education">Education</div>
+                <div class="filter-button" data-target="about-experience">Experience</div>
+                <div class="filter-button" data-target="about-skills">Skills</div>
+                <div class="filter-button" data-target="about-profile">Profile</div>
+            </div>
+        </div>
+
+        <div class="about-container">
+
+            <div class="about-content about-profile" id="about-profile">
+                <div class="about-content-heading">
+                    <h1>Profile</h1>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <p>Passionate developer focused on crafting impactful digital experiences.</p>
+                <div class="about-profile-content">
+                    <h2><span>Name : </span>Saikat Biswas</h2>
+                    <h2><span>Experience : </span>4 Years</h2>
+                    <h2><span>Nationality : </span>Indian</h2>
+                    <h2><span>Freelance : </span>Available</h2>
+                    <h2><span>Phone :  </span>+919907145093</h2>
+                    <h2><span>Age : </span>23+</h2>
+                    <h2><span>Email : </span>dev.saikatbiswas@gmail.com</h2>
+                    <h2><span>Languages : </span>English, Hindi, Bengali</h2>
+                </div>
+            </div>
+
+            <div class="about-content about-experience" id="about-experience">
+                <div class="about-content-heading">
+                    <h1>Experience</h1>
+                    <i class="fa-solid fa-print"></i>
+                </div>
+                <p>Hands-on project experience delivering efficient, real-world solutions.</p>
+                
+                <div class="about-exp-content">
+                    <div class="exp-box">
+                        <p>Oct 2025</p>
+                        <h2>Front-End Developer Intern</h2>
+                        <h3>Code Alpha</h3>
+                    </div>
+                    <div class="exp-box">
+                        <p>Nov 2025</p>
+                        <h2>Web Developer Intern</h2>
+                        <h3>InternPe</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-content about-skills" id="about-skills">
+                <div class="about-content-heading">
+                    <h1>Skills</h1>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <p>Skilled in web development, design, and creative problem-solving.</p>
+                <div class="about-skills-content">
+                    <i class="fa-brands fa-java" data-name="Java" ></i>
+                    <i class="fa-brands fa-html5" data-name="HTML"></i>
+                    <i class="fa-brands fa-css3-alt" data-name="CSS"></i>
+                    <i class="fa-brands fa-js" data-name="Java Script"></i>
+                    <i class="fa-brands fa-node-js" data-name="Node JS"></i>
+                    <i class="fa-brands fa-react" data-name="React JS"></i>
+                    <i class="fa-solid fa-database" data-name="SQL Mongo-DB"></i>
+                    <i class="fa-brands fa-bootstrap" data-name="Bootsrap"></i>
+                    <i class="fa-brands fa-github" data-name="GitHub"></i>
+                </div>
+            </div>
+
+            <div class="about-content about-education active" id="about-education">
+                <div class="about-content-heading">
+                    <h1>Education</h1>
+                    <i class="fa-solid fa-school-flag"></i>
+                </div>
+                <p>Strong tech foundation built through consistent learning and practical academic projects.</p>
+                
+                <div class="about-exp-content">
+                    <div class="exp-box">
+                        <p>2018</p>
+                        <h2>Class 10</h2>
+                        <h3>CJM Ranaghat</h3>
+                    </div>
+                    <div class="exp-box">
+                        <p>2021</p>
+                        <h2>Class 12 Science</h2>
+                        <h3>CJM Ranaghat</h3>
+                    </div>
+                    <div class="exp-box">
+                        <p>2025</p>
+                        <h2>BTECH in ECE</h2>
+                        <h3>MSIT, Kolkata</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+<!-- projects section  -->
+ <section class="projects" id="projects">
+    <div class="upper-projects">
+            <h1>My Projects</h1>
+    </div>
+
+    <div class="projects-container">
+
+        <div class="projects-card">
+            <div class="card-img">
+                <img src="./visuals/img1.png" alt="">
+            </div>
+            <div class="card-info">
+                <h2>AI Email Writer</h2>
+                <p>Generate compelling emails with AI assistance</p>
+                <div class="info-tags">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JS</p>
+                    <p>+1</p>
+                </div>
+                <div class="info-link" onclick="window.open('https:/aiemailcraft.vercel.app', '_blank')">
+                    <a>View Project</a>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>   
+        </div>
+
+        <div class="projects-card">
+            <div class="card-img">
+                <img src="./visuals/img2.png" alt="">
+            </div>
+            <div class="card-info">
+                <h2>Portfolio Website</h2>
+                <p>My own portfolio website</p>
+                <div class="info-tags">
+                    <p>React</p>
+                    <p>NodeJS</p>
+                    <p>JS</p>
+                </div>
+                <div class="info-link" onclick="window.open('https:/devsaikatportfolio.vercel.app/', '_blank')">
+                    <a>View Project</a>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>   
+        </div>
+
+        <div class="projects-card">
+            <div class="card-img">
+                <img src="./visuals/img3.png" alt="">
+            </div>
+            <div class="card-info">
+                <h2>To-Do App</h2>
+                <p>A todo list app for creating your tasks</p>
+                <div class="info-tags">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JS</p>
+                </div>
+                <div class="info-link" onclick="window.open('https:/ivaan-todoapp.vercel.app/', '_blank')">
+                    <a>View Project</a>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>   
+        </div>
+
+        <div class="projects-card">
+            <div class="card-img">
+                <img src="./visuals/img4.png" alt="">
+            </div>
+            <div class="card-info">
+                <h2>Calculator</h2>
+                <p>A simple calculator with all functionalities</p>
+                <div class="info-tags">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JS</p>
+                </div>
+                <div class="info-link" onclick="window.open('https:/ivaan-calculator.vercel.app/', '_blank')">
+                    <a>View Project</a>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>   
+        </div>
+
+        
+
+    </div>
+ </section>
+
+ <!-- contact me section  -->
+  <section class="contact-me" id="contact-me">
+        <div class="upper-contact-me">
+            <h1>Contact Me</h1>
+        </div>
+
+        <div class="contact-me-container">
+
+            <div class="contact-left">
+
+                <div class="contact-left-box">
+                    <div class="contact-box-icon">
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="contact-box-details">
+                            <h2>Phone :</h1>
+                            <p>+919907145093</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-left-box">
+                    <div class="contact-box-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div class="contact-box-details">
+                            <h2>Email :</h1>
+                            <p>dev.saikatbiswas@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-left-box">
+                    <div class="contact-box-icon">
+                        <i class="fa-solid fa-location"></i>
+                        <div class="contact-box-details">
+                            <h2>Address :</h1>
+                            <p>New Garia, Kolkata, West Bengal</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contact-right">
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="6aaa6a83-0ce5-4c72-8469-91fa91043973">
+                    <div class="input-row">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+  </section>
+
+  <!-- footer  -->
+   <footer class="footer">
+        <p>© 2025 Saikat Biswas</p>
+        <div class="footer-social">
+            <a href="https://github.com/saikatcoder-tech" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/devsaikatbiswas/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/dev.ivaan/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/dev_ivaan" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+   </footer>
+
+
+    <script src="typing.js"></script>
+    <script src="mobilenav.js"></script>
+    <script src="aboutsection.js"></script>
+</body>
+</html>

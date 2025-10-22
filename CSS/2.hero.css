@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+
+/* whole hero page layout  */
+        .container{
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+
+            /* displaying content in center  */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 15vw;
+        }
+
+        /* the background video styling  */
+        .hero-video{
+            position: absolute;
+            z-index: -1;
+
+            /* top :0 and left:0 can be done,but done this for sharpness maybe  */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            /* done for extra sharpness  */
+            filter: brightness(1.1) contrast(1.04) saturate(1.1) drop-shadow(0 0 1px black);
+        }
+
+                /* black overlay so that text is displayed */
+                    .container::before {
+                    content: "";
+                    position: absolute;
+                    top: 0; left: 0;
+                    width: 100%; height: 100%;
+
+                    background: rgba(0,0,0,0.5);
+                    z-index: 1;
+                }
+
+                /* down edge smoothness for smooth effect*/
+                    .container::after {
+                    content: "";
+                    position: absolute;
+                    top: 0; left: 0;
+                    width: 100%; height: 100%;
+
+                    background: linear-gradient(to bottom, #0a0a0a 0%, transparent 20%, transparent 80%, #0a0a0a 100%);
+                    z-index: 2;
+                }
+
+
+
+/* content styling  */
+
+
+/* container for content to display in middle ,not left  */
+        .container-left{
+            z-index: 99;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            
+        }
+
+        .container-left p{
+            color: #FFDD00;
+            font-family: "SUSE Mono", sans-serif;
+            align-self: self-start;
+        }
+
+        .container-left h1{
+            color: #fff;
+            font-size: 5rem;
+        }
+
+        /* the typewriting text  */
+        .container-left h2{
+            color: #cccccc;
+            font-size: 2.2rem;
+        }
+
+            /* the span text and animation edited in js  */
+            .container-left span{
+                color: #FFDD00;
+                font-family: "SUSE Mono", sans-serif;
+
+                text-shadow:0 0 2px #ff0,0 0 4px #ff0;
+            }
+
+                /* its the bar animation only  */
+                .typing-text {
+                    border-right: 2px solid #ff0; /* cursor color */
+                    padding-right: 5px;
+                    animation: blink 0.7s infinite;
+                }
+
+                @keyframes blink {
+                    50% { border-color: transparent; }
+                }
+
+        /* get in touch button  */
+        .container-left button {
+            background: none;
+            border: 1.2px solid #FFDD00;
+            padding: .8rem 1.7rem;
+            color: white;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 2rem;
+            transition: 0.5s ease;
+            animation: glowPulse 2s infinite ease;
+        }
+
+                @keyframes glowPulse {
+                    0%, 100% {
+                        box-shadow: 0 0 1px #ff0, 0 0 6px #ff0;
+                    }
+                    50% {
+                        box-shadow: 0 0 8px #ff0, 0 0 15px #ff0;
+                    }
+                }
+
+                .container-left button:hover{
+                    background: #FFDD00;
+                    color: black;
+                    box-shadow:0 0 3px #ff0,0 0 6px #ff0;
+                    transform: scale(1.07);
+                }
+
+
+
+/* designing the social in left sidebar  */
+        .container-socials{
+            z-index: 999;
+            position:fixed;
+            bottom: 0;
+            left: 3rem;
+
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+
+            align-items: center;
+            justify-content: center;
+
+        }
+
+                /* designing the buttons  */
+                .container-socials a{
+                    text-decoration: none;
+                    color: #cccccc;
+                    font-size: 1.2rem;
+                    transition: 0.4s ease;
+                }
+
+                .container-socials a:hover{ 
+                    color: #FFDD00;
+                    text-shadow: 0 0 15px #ff0, 0 0 30px #ff0;
+                    transform: scale(1.2) rotate(15deg);
+                }
+
+                /* the long line for good looking UI  */
+                .container-socials hr{
+                    width: 1px;
+                    height: 8rem;
+                }
+
+/* scroll down animation  */
+
+        .hero-scrolldown{
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: .5rem;
+        }
+
+        .hero-scrolldown .arrow-scroll-down{
+        color: #ff0; 
+        font-size: .9rem;
+        animation: bounce 1.5s infinite ease-in-out;
+        cursor: pointer;
+        }
+
+                @keyframes bounce {
+                0%, 100% {
+                    transform: translate(0, 0);
+                }
+                50% {
+                    transform: translate(0, -10px);
+                }
+                }
+
+        .hero-scrolldown h2{
+        color: #cccccc;
+        font-family: "SUSE Mono", sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+        }
+
+
+/* Responsiveness  */
+
+        @media (max-width: 760px) {
+
+            .container-left p{
+                align-self: center;
+                font-size: 16px;
+            }
+
+            .container-left h1{
+                font-size: 3rem;
+            }
+
+            .container-left h2{
+                color: #cccccc;
+                font-size: 1.5rem;
+            }
+
+            .container-left button { 
+                padding: .7rem 1.3rem;
+                font-size: .8rem;
+            }  
+        }
+
+        @media (max-width: 420px) {
+
+            .container-left p{
+                align-self: center;
+                font-size: 15px;
+            }
+
+            .container-left h1{
+                font-size: 2.5rem;
+            }
+
+            .container-left h2{
+                color: #cccccc;
+                font-size: 1.1rem;
+            }
+
+            .container-left button {  
+                padding: .6rem 1.1rem;
+                font-size: .7rem;   
+            }
+        }
+
+        /* hiding the social for mobile  */
+
+        @media (max-width: 1024px) {
+            .container-socials{
+                display: none;
+            }
+        }
